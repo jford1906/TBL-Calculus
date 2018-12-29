@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage,stackrel}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Productive Failures}
+
+\begin{document}
+All of these are wrong. You know the drill
+\begin{enumerate}
+\item Is the antiderivative of $f(x) = 5x^7 + 3x^5 - 6x^2$ equal to $F(x) = 35x^6 + 15x^4 - 12x$?\\
+\textbf{Correction:} $F(x) = \frac{5}{8}x^8 + \frac{3}{6}x^6 - \frac{6}{3}x^3 + C$
+\item Is the antiderivative of $g(x) = \sec^2(x) - \sin(x) + \cos(x)$ equal to $G(x) = \tan^2(x) - \cos(x) - \sin(x)$?\\
+\textbf{Correction:} $G(x) = \tan(x) + \cos(x) + \sin(x)$
+
+\item Approximate the area under the curve $f(x) = 2x^2 - 3$ over $[0,1]$, using $n=4$, and right endpoints. What's wrong with this setup?
+$$x_0 = 0, x_1 = 1/4, x_2 = 1/2, x_3 = 3/4, x_4 =1$$
+
+$$\mbox{Area } =  \frac{1}{4} \cdot \frac{1}{4} + \frac{1}{2} \cdot \frac{1}{4} + \frac{3}{4} \cdot \frac{1}{4} + 1 \cdot \frac{1}{4}$$
+\textbf{Correction:}$$\mbox{Area } =  (2(\frac{1}{4})^2 -3) \cdot \frac{1}{4} + (2(\frac{1}{2})^2 -3) \cdot \frac{1}{4} + (2(\frac{3}{4})^2 -3) \cdot \frac{1}{4} + (2(1)^2 -3)\cdot \frac{1}{4}$$
+
+\item Find the area under the curve $g(x) = 1-x^2$ over $[-4,-1]$, with $n=3$ and left endpoints. What's wrong?
+$$\mbox{Area } =  g(-4) \cdot \frac{-1}{4} + g(-3) \cdot \frac{-1}{4} + g(-2) \cdot \frac{-1}{4}$$
+\textbf{Correction:} $$\mbox{Area } =  g(-4) \cdot 1 + g(-3) \cdot 1 + g(-2) \cdot 1$$
+
+\item The Riemann Sum for $f(x) = 2-x$ over $[0,1]$ is 
+$$\lim_{n \rightarrow \infty} \sum_{i=1}^n (2 - \frac{1}{n}) \frac{i}{n}$$
+\textbf{Correction:}
+$$\lim_{n \rightarrow \infty} \sum_{i=1}^n (2 - \frac{i}{n}) \frac{1}{n}$$
+\item The Riemann Sum for $g(x) = \cos(x)$ over $[-\pi, \pi]$ is
+$$\lim_{n \rightarrow \infty} \sum_{i=1}^n (-\pi + \frac{2\pi i}{n}) \frac{2\pi}{n}$$
+\textbf{Correction:}
+$$\lim_{n \rightarrow \infty} \sum_{i=1}^n cos(-\pi + \frac{2\pi i}{n}) \frac{2\pi}{n}$$
+
+\item All of these attempts at using the Fundamental Theorem of Calculus are wrong. Fix them.
+\begin{itemize}
+    \item $\int_0^3 x^3 dx = 3^3 - 0^3 = 27$\\
+    \textbf{Correction:} $\frac{3^4}{4} - \frac{0^4}{4}$
+
+    \item $\int_0^3 x^3 dx = 3(3)^2 - 3(0)^2 = 18$\\
+    \textbf{Correction:} $\frac{3^4}{4} - \frac{0^4}{4}$
+
+    \item $\int_{-3}^0 x^3 dx = \frac{(-3)^4}{4} - \frac{0^4}{4} = \frac{81}{4}$\\
+    \textbf{Correction:} $\frac{0^4}{4} - \frac{(-3)^4}{4}$
+
+    \item $\int_{-\pi}^{2\pi} \sin(x) dx = 0$\\
+    \textbf{Correction:} $\cos(2\pi) - \cos(-\pi)$
+
+    \item $\int_0^1 \sqrt{x}(2x -1) dx = \left(\int_0^1 \sqrt{x}dx\right) \left( \int_0^1 2x-1 dx \right)$\\
+    \textbf{Correction:}$\int_0^1 \sqrt{x}(2x -1) dx = \int_0^1 2x^{\frac{3}{2}} - \sqrt{x} dx = (\frac{2}{5} 2x^{\frac{5}{2}} - \frac{2}{3}x^{\frac{3}{2}}) |_0^1 = (\frac{2}{5} 2(1)^{\frac{5}{2}} - \frac{2}{3}(1)^{\frac{3}{2}}) - (\frac{2}{5} 2(0)^{\frac{5}{2}} - \frac{2}{3}(0)^{\frac{3}{2}})$
+
+\end{itemize}
+\item For each of the integrals below, I've chosen the wrong substitution. Carry it out with this substitution to see why it's wrong, then correct it.
+\begin{itemize}
+    \item $\int 4x^3\sqrt{1 - x^4} dx$. I chose $u = \sqrt{1-x^4}$.\\
+    \textbf{Correction:} Use $u = 1 - x^4$, then $-du = 4x^3dx$ and $$\int 4x^3\sqrt{1 - x^4} dx = \int \sqrt{u} du = \frac{2}{3}u^{3/2} + C = \frac{2}{3}(1 - x^4)^{3/2} + C $$
+
+    \item $\int \sin(2x)\cos(2x) dx$. I chose $u = \sin(x)$.\\
+    \textbf{Correction:} Use $u = \sin(2x)$, then $\frac{1}{2}du = \cos(2x) dx$ and $$\int \sin(2x)\cos(2x) dx = \int \frac{1}{2} u du = \frac{1}{4} u^2 + C =  \frac{1}{4} \sin^2(2x) + C$$
+
+    \item $\int \frac{x}{(1-x^2)^5}$. I chose $u = x^2$.\\
+    \textbf{Correction:} Use $u = 1-x^2$, then $-\frac{1}{2}du = x dx$ and $$\int \frac{x}{(1-x^2)^5} = \int -\frac{1}{2} \frac{1}{u^5} du = \frac{1}{8} u^{-4} + C = \frac{1}{8(1-x^2)^4} + C$$
+
+\end{itemize}
+
+\end{enumerate}
+\end{document}

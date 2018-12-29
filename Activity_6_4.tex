@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage,stackrel}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Applications of inverse functions}
+\begin{document}
+Suppose you have a function whose rate of growth is proportional to it's value. For example, if you have a population of bacteria, it will grow faster the larger it gets. If you set a large cup of coffee on the counter, it will cool more slowly than a shot of espresso.
+
+Let's assume we have the equation
+$$\frac{dy}{dt} = ky$$, where $y$ is a function of time and $k$ is some constant. Then the derivative of $y$ (it's rate of change) is proportional to it's value.
+
+\begin{enumerate}
+    \item Like we did in our substitution problems, treat $dy$ adnd $dt$ as separate values. Multiply both sides of our equation by $dt$ and divide both side by $y$.
+    \item Integrate the left side with respect to $y$ and the right side with respect to $t$. You will have a $+C$ on both sides, so it's ok to just leave it on the right side.
+    \item Solve for $y$.
+    \item Use the rules of exponents to split up the exponent on $e$. This should give you an $e^C$. You can change this to a new constant $A$. You should end up with $y = Ae^{kt}$.
+    \item What is $y(0)$? This value is your \textit{initial condition.}
+\end{enumerate}
+
+We can apply this formula to different situations.
+
+\begin{enumerate}
+    \setcounter{enumi}{6}
+    \item Assume you have a popluation of 500 bacteria. After 3 hours, there are 8000 bacteria.
+    \begin{itemize}
+        \item Assume $y(0) = 500$ as your initial condition.
+        \item Use the formula from above to write a function for the number of bacteria after $t$ hours.
+        \item How many bacteria are there after 4 hours?
+        \item When will the population reach 30,000?
+    \end{itemize}
+    \item Polonium 214 has a half-life of $1.4 \times 10^{-4}$ seconds. That means that after that amount of time, only half of the sample remains.
+    \begin{itemize}
+        \item Assume you start with $50g$ of Polonium. How much is left after $t$ seconds?
+        \item How much is left after 10 seconds?
+        \item How long will it take until there is exactly $40g$ left?
+        \end{itemize}
+\end{enumerate}
+\end{document}

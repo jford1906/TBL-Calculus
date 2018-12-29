@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage,stackrel}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Riemann Sums}
+
+\begin{document}
+Suppose we have a function $f(x)$, and we would like to know the exact area under the curve, over the interval $[a,b]$.
+\begin{enumerate}
+\item The \textit{Riemann Sum}, as defined in the book, is
+$$\lim_{n \rightarrow \infty} \sum_{i=1}^n f(x_i) \Delta x.$$
+\item If there are $n$ subdivisions of $[a,b]$, how long must each of these be? Write this as $\Delta x = ?$.
+\item Assume we start at $a$, and move to the right, moving $\Delta x$ each time. We write $x_0 = a$, $x_1 = a + \Delta x$, and so forth. What would we write for $x_i$? How about $x_n$?
+\item Replace $f_i$ and $\Delta x$ in the formula in (1) by what you found in (2) and (3).
+\item For each of the functions below, write the Riemann Sum over the given interval.
+\begin{itemize}
+\item $f(x) = x^2$ over $[0,1]$
+\item $g(x) = x^3$ over $[-1,0]$
+\item $h(x) = \sin(x)$ over $[-\pi,\pi]$
+\item $k(x) = \frac{1}{x}$ over $[1,2]$
+\end{itemize}
+\item This is the Riemann Sum for a function. What is the function, and over what interval are we trying to find the area?
+$$\lim_{n \rightarrow \infty} \sum_{i=1}^n \left(2 + \frac{5i}{n}\right) \frac{3}{n}.$$
+\item Suppose you wanted to exactly find the area under the curve $f(x) = x^2$ over $[0,1]$, using a Riemann Sum. We will do this together as a class.
+\end{enumerate}
+\end{document}

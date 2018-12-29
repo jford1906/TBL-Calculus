@@ -1,0 +1,43 @@
+  \documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Applying Differentiation Techniques}
+
+\begin{document}
+\begin{enumerate}
+\item How do we find the equation of the tangent line to a curve at a point?
+\begin{itemize}
+\item First, make sure the team recalls the point-slope formula for the equation of a line. We should be able to find the equation of a straight line using only the slope, and some arbitrary point on that line.
+\item Given the curve $y = x^2$, what is the equation of the tangent line when $x = 3$?
+\item Given the curve $f(x) = \sin(x) - \cos(x)$, find the equation of the tangent line at the point (0,-1).
+\end{itemize} 
+
+\item How do we linearly approximate functions with a derivative? 
+\begin{itemize}
+\item Suppose we want to find the approximate value of $\sqrt[3]{8.03}$.
+\item Can we find the exact value of $\sqrt[3]{8}$ without a calculator? 
+\item Find the equation of the tangent line to the curve $y = \sqrt[3]{x}$ at the when $x = 8$.
+\item Find the value of the point on this tangent line when $x = 1.03$. Compare this to the result on your calculator for finding $\sqrt[3]{1.03}$.
+\end{itemize}
+
+\item How could we use this idea to find an approximate value for $\sqrt[5]{31.94}$?
+
+\item Can we use the tangent line to help approximate a zero of a function?
+\begin{itemize}
+    \item Start with the equation $x^3 + 2x - 1 = 0$.
+    \item It's tough to find an exact solution to this. First, show that the function $f(x) = x^3 + 2x - 1$ has at least one real zero on the interval $[0,1]$.
+    \item Find the equation of the tangent line to the function $f(x)$ when $x = 1$. We'll need some notation, so let $x_0 = 1$
+    \item Where does that tangent line cross the $x$-axis? Label that point $x_1$.
+    \item Now find the equation of the tangent line to the curve when $x = x_1$. Where does that line cross the $x$-axis? Label that point $x_2$.
+    \item If you were to keep doing this, make a conjecture about what would happen with the sequence of points $x_0, x_1, x_2, \ldots$.
+\end{itemize}
+\end{enumerate}
+
+\end{document}

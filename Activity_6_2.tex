@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage,stackrel}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Logarithmic Differentiation}
+\Large
+\begin{document}
+\begin{enumerate}
+\item Given the function $y = x^x$, find $\frac{dy}{dx}$ using the following method:
+\begin{itemize}
+\item Start by taking a logarithm of both sides.
+\item Use a law of logarithms to change the right side of the equation into a product.
+\item Implicitly differentiate the function with respect to $x$.
+\item Solve for $\frac{dy}{dx}$
+\item You should now have a single $y$ term on the right side of the equation. Replace it with the formula for $y$ from the first part of the problem.
+\end{itemize}
+\item Differentiate $y = x^{\sin(x)}$
+\item Differentiate $y = \tan^x(x)$
+\item Differentiate $y = \cos^{2x^3 -\sqrt{x}}(x)$
+\item You can solve this next problem by using the product and quotient rule, but logarithms will make it faster. Instead of getting rid of the exponent, break the problem up into a difference of logarithms. Take a logarithm of both sides, use laws of logarithms to simplify the right side, then implicitly differentiate with respect to $x$.
+$$y = \frac{x^5}{(1-10x)(\sqrt{x^2+2})}$$
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage,stackrel}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Indefinite Integrals}
+
+\begin{document}
+Evaluate the following indefinite integrals. For each, perform the differentiation to be sure you're correct.
+\begin{enumerate}
+\item $\int 6x^5 - 4x^3 + 7x -4 dx$
+\item $\int 6x^5 - 4x^3 + 7x dx -4$
+\item $\int 6x^5 - 4x^3dx + 7x -4 $
+\item $\int 6x^5dx - 4x^3 + 7x -4 $
+\item $\int 5x^{-3} + 17x^{-5}dx $
+\item $\int \sqrt[3]{t^5} + \frac{1}{\sqrt[9]{t}} + 3 dt$
+\end{enumerate}
+
+Work through the following steps to evaluate the given integrals using substitution.
+\begin{enumerate}
+    \setcounter{enumi}{6}
+    \item We want to evaluate $\int (\sin(x^4))(4x^3) dx$
+    \begin{enumerate}
+        \item Find $\frac{du}{dx}$ if $u = x^4$. Multiply both sides by $dx$ to "solve" for $du$.
+        \item Use implicit differentiation to find $\frac{d}{dx} \sin(u)$
+        \item Evaluate $\int \sin(u) du$
+        \item In the original integral, use the substitutions $u = x^4$ and $du = 4x^3 dx$  to change it into the integral from the last step.
+        \item Replace the $u$ in your solution to the integral from step $(c)$ with $x^4$. Differentiate this function, and compare the result to the integrand from the original problem.
+    \end{enumerate}
+    \item Find $\int 5(5x + 6)^7 dx$. Try $u = 5x+6$.
+    \item Find $\int (2x -3)^5 dx$. Try $u = 2x-3$. 
+    \item Find $\int \frac{x}{(x^2 + 1)^2} dx$. Try $u = x^2 +1$.
+\end{enumerate}
+\end{document}

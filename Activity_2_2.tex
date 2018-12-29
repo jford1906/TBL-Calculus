@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem} 
+\usepackage{enumitem, comment, multicol}
+\pagestyle{fancy}
+\chead{Math 121 - Computing Derivatives 2}
+\renewcommand{\baselinestretch}{1.5}
+\makeatletter
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}%
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}%
+\fi}
+\makeatother
+\begin{document}
+\begin{enumerate}
+\item Use the quotient rule to find the derivative of $y = \tan(x)$ and $y = \cot(x)$.
+\item Find the derivatives of the given functions
+
+\begin{multicols}{3}
+\begin{itemize}
+    \item $f(x) = 3x+2$
+    \item $g(x) = \sin(x)$
+    \item $p(x) = (3x+2)\sin(x)$
+    \item $q(x) = \frac{3x+2}{\sin(x)}$
+    \item $f(x) = 2-2x $
+    \item $g(x) = \sqrt{x}$
+    \item $p(x) = (2 - 2x)\sqrt{x}$
+    \item $q(x) = \frac{(2-2x)}{\sqrt{x}} $
+    \item $f(x) = x$
+    \item $g(x) = \tan(x)$
+    \item $p(x) = x\tan(x) $
+    \item $q(x) = \frac{x}{\tan(x)}$
+\end{itemize}
+\end{multicols}
+\item Suppose that the amount of air in a balloon at any time $t$ is given by
+$$V(t) = \frac{6\sqrt[3]{t}}{4t+1}.$$
+
+Determine if the balloon is being filled with air or being drained of air at $t=8$.
+
+\item Suppose that the amount of money in a bank account is given by
+$$P(t)=500+100\cos(t) - 150\sin(t)$$
+where $t$
+ is in years. During the first 10 years in which the account is open when is the amount of money in the account increasing?
+
+\item Find $\frac{dy}{dx}$, if $$y = \frac{\sqrt{x}\sec(x)}{\sqrt[3]{2x-1}(x^2 + 3)}$$
+\end{enumerate}
+\end{document}

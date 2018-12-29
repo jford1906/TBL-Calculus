@@ -1,0 +1,37 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{setspace}
+
+\setlength\parindent{0pt}
+\usepackage{hyperref}
+\usepackage{amssymb,amsthm,amsmath, fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{lipsum}
+
+\begin{document}
+\chead{Math 121 - Continuity and the Intermediate Value Theorem}
+\begin{enumerate}
+\item What is the definition of continuity? 
+\item What types of functions are stated to be continuous in Theorem 6 in Section 1.5?
+\item It is given in the text that all trigonometric functions are continuous at all points in their domain. Show why this function is continuous at all points in $(-\infty, \infty)$. There's really only one thing you need to check. What is it?
+$$f(x) = \left\{ \begin{array}{rl} \sin(x) & \mbox{if } x < \pi/4\\ \cos(x) & \mbox{if } x \geq \pi/4 \end{array}\right.$$
+\item Write a function that isn't continuous at $x = 2$ or at $x = -2$.
+\item We can apply the Intermediate Value Theorem to show that an equation has a solution in a given interval.
+
+Consider the equation $2x^3 + 7x - 5 = 0$. I claim that this has a solution in the interval (0,2). Let's use IVT to show that this works.
+
+\begin{itemize}
+\item Is the function $f(x) = 2x^3 + 7x -5$ continuous on the interval (0,2)?
+\item What is the value of $f(0)$?
+\item What is the value of $f(2)$?
+\item What must have happened to the graph of the function $f(x)$ between $f(0)$ and $f(2)$, and why does this mean our original equation has a solution?
+\end{itemize}
+\item Suppose a monk rises in the morning, and starts to walk up a mountain. He starts at 7 am, and reaches the peak at 7 pm. He spends the night, and starts down the mountain at 7 am, arriving back at his home at 7 pm. Show that there is at least one point on the mountain that the monk will walk past at the same time on both days.
+
+Try graphing his elevation as a function of time. You can do this with two graphs, one going up, and the other going down, on the same sheet of paper. What has to happen?
+\end{enumerate}
+\end{document}

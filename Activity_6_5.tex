@@ -1,0 +1,22 @@
+\documentclass{exam}
+
+\usepackage{amsmath,amssymb,amsthm,graphicx}
+\chead{Math 121 - Productive Failures}
+
+\begin{document}
+Stuff is wrong. Make stuff not wrong.
+\begin{enumerate}
+    \item $\frac{d}{dx} \ln(x^2) = 2\ln(x)$
+    \item $\frac{d}{dx} e^{x^2} = x^2e^{x^2-1}$
+    \item $\frac{d}{dx} \tan^{-1}(x) = -\tan^{-2}(x) \sec^2(x)$
+    \item $\frac{d}{dx} x^x = xx^{x-1}$
+    \item $\frac{d}{dx} x^x = x^x \ln(x)$
+    \item $\lim_{x \rightarrow 2} \frac{x-2}{8 - x^3} = \lim_{x \rightarrow 2} \frac{(8-x^3) - (x-2)(-3x^2)}{(8-x^3)^2}$=?
+    \item $\int_{-3}^3  x^2 + x^3 -1 dx = (3^2 + 3^3 -1) - ((-3)^2 + (-3)^3 -1)$
+    \item If I have the integral $\int \frac{\cos(x)}{1 - \sin(x)} dx$, why shouldn't I choose $u = \cos(x)$? What should I use, and what is the correct solution?
+    \item Trying to use the first derivative test to find the max and min of $f(x) = \frac{x^3}{3} + \frac{x^2}{2} -2x +1$. I find the critical points with $f'(x) = x^2 + x -2 = 0$, and come up with $x = -2$ and $x = 1$. I use $x = -3$, $x = -$ and $x = 2$ as test points. Since $f(-3)>0$, $f(-1)>0$, and $f(2) <0$, I assume that $x=1$ is a local max, and that $x = -2$ is neither. Why is this wrong?
+    \item What if I wanted to use the second derivative test? I'll use the same function as above, and I take the second derivative, to get $f''(x) = 2x +1$. I know that if I set this equal to zero, I get $x = -1/2$. I can find that $f(-1/2)$ is positive, and that $f'(-1/2)$ is negative, but I don't know how those are helpful. What should I do with that second derivative to use the second derivative test correctly?
+
+\end{enumerate}
+
+\end{document}

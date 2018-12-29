@@ -1,0 +1,31 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage,stackrel}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - L'Hopital's Rule}
+\begin{document}
+Verify that each of the following is an indeterminate form, and use L'Hopital's rule to evaluate the limit.
+\begin{enumerate}
+    \item $\lim_{x \rightarrow 2} \frac{x-2}{x^2-4}$
+    \item $\lim_{x \rightarrow \infty} \frac{2x+7}{3x^2 - 5}$
+    \item $\lim{x \rightarrow 0^+} x\ln(x)$. Try rewriting $x$ as $$\frac{1}{1/x}$, and get an indeterminate form.
+    \item $\lim_{x \rightarrow 0^+}x^x$
+    \begin{itemize}
+        \item Rewrite this as $\lim_{x \rightarrow 0^+}e^{\ln(x^x)}$
+        \item Use properties of logarithms to bring the exponent in front of the logarithm.
+        \item Use properties of limits to bring the limit into the exponent (since $e^x$ is a continuous function).
+        \item The exponent should now be the limit you took above. Evaluate from there.
+    \end{itemize}
+    \item $\lim_{x \rightarrow 3} \frac{1/x - 1/3}{x^2-9}$
+    \item $\lim_{x \rightarrow 0} \frac{x^2e^x}{\tan^2(x)}$
+    \item $\lim_{x \rightarrow \infty}\frac{3 + \ln(x)}{x^2 + 7}$
+    \item $\lim_{x \rightarrow \infty}\ln(x)^{1/x}$
+    \item $\lim_{x \rightarrow \infty} (\sqrt{x^2+1} - \sqrt{x +1})$. Try multiplying and dividing by the conjugate and see if you can get an indeterminate form.
+\end{enumerate}
+\end{document}

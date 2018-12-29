@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Optimization 1}
+
+\begin{document}
+\begin{enumerate}
+\item Assume we have a cylindrical can that holds 1 L of liquid. We want to find the minimal amount of metal used to make the can.
+\begin{itemize}
+\item First, we identify the function we need to optimize. To minimize the amount of metal used, we'll minimize the function that measure the surface area. For a cylinder with radius $r$ and height $h$, the surface area is $$S = 2\pi r^2 + 2 \pi r h$$ 
+\item Second, we need a \textit{constraint}. In this case, it's the volume. The volume of a cylinder is $$V = \pi r^2 h,$$ or in this case, $1 = \pi r^2h$, since the volume is 1 liter.
+\item Right now the formula for $S$ has 2 variables in it, and we only know how to take the derivative of a function with one variable. You can use the constraint to get rid of one variable. This is done by solving the volume equation for either $r$ or $h$. In this case, it's easier to solve for $h$.
+\item Once you have a formula for $h$, replace the $h$ in the formula for $S$. 
+\item Now you should have a formula for $S$ that only has one variable, $r$. Take the first derivative, and find the critical points.
+\item Find a critical point that is a local minimum. This should be a value for $r$.
+\item Use that value of $r$ to find $h$, and then find $S$.
+\end{itemize}
+\item Suppose we want to enclose a rectangular field. One side of the field has a barn, so we only need 3 sides of the rectangle. If there is only 500 feet of fencing that can be used, find the length and width of the rectangle that contains the largest area.
+\begin{itemize}
+\item What is the function you are trying to optimize?
+\item What is the constraint?
+\item Get the function you are trying to optimize down to just one variable, and find the local maximum.
+\end{itemize}
+\item To inscribe a rectangle in a circle, the rectangle must be inside the circle, with all 4 corners touching the circle. What is the area of the largest rectangle that can be inscribed in a circle of radius 4?
+\item Find the point on the curve $y = x^2 + 1$ that is closest to $(0,2)$.
+\end{enumerate}
+
+\end{document}

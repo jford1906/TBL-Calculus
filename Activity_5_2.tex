@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage,stackrel}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Approximating Area Under a Curve}
+
+\begin{document}
+\begin{enumerate}
+\item Approximate the area under the curve $f(x) = x^2$, over the interval [0,1].
+\begin{itemize}
+\item Sketch the picture, making it pretty big.
+\item Let's set $n=4$. Divide the interval from [0,1] into 4 equal pieces, and label each endpoint on the $x$-axis. Use $x_0 = 0$ and $x_4 = 1$. Use the other subscripts for the points in between.
+\item For each $x_i$, label the point on the graph above it. You have the function, and you know the value of each of these endpoints, so you should get the exact $x$ and $y$ values for each point.
+\item Use the 4 endpoints on the left to find the height of 4 rectangle. They should all have the same base width. Find and sum up their areas.
+\item Now do the same thing, using the 4 endpoints on the right. Do you get a different answer?
+\item The actual area is 1/3. How close did you get? How could you get closer?
+\end{itemize}
+\item Why can't we use this method to find the area under the curve $f(x) = \frac{1}{x}$ for any interval containing 0?
+\item Find the area under the curve $f(x) = x^3$ over the interval $[-1,0]$, with $n=6$
+\item Without choosing a value for $n$, can you find the exact area under the curve $f(x) = \sin(x)$ over the interval $[-\pi,\pi]$? Try sketching the graph.
+\end{enumerate}
+\end{document}

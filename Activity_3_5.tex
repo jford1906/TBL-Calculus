@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Productive Failures}
+
+\begin{document}
+\begin{enumerate}
+\item $$\mbox{Original equation: } x^3 + y^2 = \sqrt{xy}$$ $$\mbox{After differentiation using } \frac{d}{dx}:  3x^2 + 2y = \frac{1}{2}(xy)^{-1/2}(y + x)$$
+\item $$\mbox{Original equation: } \cos(y) = 2x^4 - 3y^5$$
+$$\mbox{After differentiation using } \frac{d}{dx}:  -\sin(y) \frac{dx}{dy} = 8x^3 - 15x^4 \frac{dx}{dy}$$
+\item $$\mbox{Original equation: } x^2 + 2xy - y^2 = \tan(xy)$$
+$$\mbox{After differentiation using } \frac{d}{dx}:  2x + 2y\frac{dy}{dx} - 2y\frac{dy}{dx} = \sec^2(xy) \frac{dy}{dx}$$
+
+\item The equation of the tangent line to the curve $y = \cos(\frac{2}{x})$ at the point $(\frac{2}{\pi},-1)$ is $$y+1 = \sin(\frac{2}{x})\cdot(-2x^{-2})(x-\frac{2}{\pi})$$
+
+\item A spherical snowball is melting. It's radius is decreasing at 2$cm/sec$. How fast is it's volume decreasing when the radius is 10$cm$?
+\begin{itemize}
+\item I'll set this up by drawing a sphere, and labeling the radius.
+\item I look up the formula for the volume of a sphere, and I find $$V = \frac{4}{3} \pi r^3.$$
+\item I set the radius equal to 10, so I get $$V = \frac{4}{3} \pi \cdot 1000$$
+\item I take the implicit derivative with respect to $t$, and I find $\frac{dV}{dt} = 0$.
+\item Why is this wrong?
+\end{itemize}
+\item Suppose a street light is 15 feet tall. A 5 foot tall woman walks towards the light at 5$ft/sec$. How fast is the length of her shadow changing when she is 40 feet from the pole?
+\begin{itemize}
+\item I start by drawing a triangle, and adding a vertical line between the post and the point of the triangle, to represent the woman.
+\item I label the distance from the pole to the woman $x$, and the distance from the woman to the point of the triangle $y$. I'm assuming $y$ is the length of her shadow.
+\item I try to use the Pythagorean theorem here, but I don't have any information about how fast the hypotenuse is changing. What should I use instead?
+\end{itemize}
+\end{enumerate}
+
+\end{document}

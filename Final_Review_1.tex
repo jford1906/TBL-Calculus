@@ -1,0 +1,118 @@
+\documentclass{exam}
+
+\usepackage{amsmath,amssymb,amsthm,graphicx, tikz}
+
+\title{Math 121 - Fall 2018 - Final Productive Failures}
+\date\today
+
+\begin{document}
+\maketitle
+\bigskip
+
+\normalsize
+\begin{center}
+%Find and correct all of the mistakes below. Remember, all of these methods are wrong! Do not use any of them on the exam!
+Updated with actual solutions.
+\end{center}
+\begin{enumerate}
+\item Find Horizontal and Vertical Asymptotes of the following function, using limits. $$ \frac{3x^2 - 10x +3}{2x^2 - 8x +6}$$
+
+%\textbf{Solution:} I remember from pre-calc that I can use the leading coefficients. So the horizontal asymptote is $\frac{3}{2}$. To get vertical asymptotes, I set the denominator equal to zero, and found $x = 1$ and $x = 3$. Who needs limits? Those are dumb.
+$$\lim_{x \rightarrow \infty} \frac{3x^2 - 10x +3}{2x^2 - 8x +6} = \frac{3}{2}$$ There is a horizontal asymptote at $y = \frac{3}{2}.$
+
+Looking at values outside of the domain, I see that $x = 1$ and $x = 3$ both make the denominator zero.
+
+$$\lim_{x \rightarrow 1^+} \frac{3x^2 - 10x +3}{2x^2 - 8x +6}  = \infty$$
+$$\lim_{x \rightarrow 3} \frac{3x^2 - 10x +3}{2x^2 - 8x +6}  = 2$$
+
+Therefore, only $x = 1$ is a vertical asymptote.
+
+\item Take the implicit derivative of this equation, with respect to $x$. You do not need to simplify the algebra.
+$$\sin(yx) = x^2y^3$$
+
+%\textbf{Solution:} I know there should be a $\frac{dy}{dx}$ in there somewhere. Let's try
+%$$\cos(xy)\frac{dy}{dx} = 3x^2y^2 \frac{dy}{dx}$$
+Being careful of the chain and product rule, I have
+$$\cos(yx)\left(\frac{dy}{dx} x + y\right) = 2xy^3 + x^2\cdot3y^2 \frac{dy}{dx}.$$
+\item A 1.5m tall woman is walking away from a 10m tall lightpost at 2 m/s. How fast is the length of her shadow changing when she is 20m away from the post?
+
+%\textbf{Solution:} I draw a triangle, with the long back leg labelled 10, and another vertical line in the middle labelled 1.5. I label the bottom 20, and try to use the Pythagorean theorem to get the length of the hypotenuse, but then I get stuck. Something about similar triangles...
+\begin{tikzpicture}
+\draw (0,0)--(0,5)--(12,0)--(0,0);
+\draw (6,0)--(6,2.5);
+\draw (0.5,2.5) node {$10m$};
+\draw (6.5, 1.25) node {$1.5m$};
+\draw (3, 0.5) node {$x$};
+\draw (9, 0.5) node {$y$};
+\end{tikzpicture}
+\\
+Draw a picture of the post and the woman. Those heights aren't changing, so you can label them. We know the rate of change between the woman and the post, so I label that $x$. I want to know how fast the length of her shadow is changing, so I label the distance from the woman to the tip of her shadow $y$. Now I know that $\frac{dx}{dt} = 2$, and I want to find $\frac{dy}{dt}$. Since I have similar triangles, their sides are in proprortion. I set up the proportion
+$$\frac{x + y}{y} = \frac{10}{1.5}.$$ Simplify this expression to get $1.5x = 8.5y$, and differentiate with respect to $t$ to get the related rates equation $$1.5 \frac{dx}{dt} = 8.5 \frac{dy}{dt}.$$ We can now solve for $\frac{dy}{dt} = \frac{6}{17}$ 
+\item  Using the function $f(x) = 5x^3 + 2x^2 - 1$:
+\begin{itemize}
+\item Find all critical points.\\
+%\textbf{Solution:} This has a $x^3$ in it, and I don't know how to solve that.
+We set $f'(x) = 0$, so $15x^2 + 4x = 0$, and find critical points $x = 0$ and $x = -4/15$
+\item Find all intervals where the function is increasing and decreasing.\\
+%\textbf{Solution:} Ok, I found that there are critical points are at $x=0$ and $x = -4/15$. So I put those on a number line, and I picked my test points as $x = -1$, $x = -0.1$ and $x = 1$. I find that $f(-1)$ is negative, $f(-0.1)$ is negative, and $f(1)$ is positive. So the function is decreasing from $(-\infty, 0$ and increasing from $(0,\infty).$
+Breaking up the real line into intervals around the critical points, we have to check test points in $$(\infty, -4/15), (-4/15,0), \mbox{ and } (0, \infty).$$ Plugging in test points we find that the first derivative is positive on $(\infty, -4/15)$ and negative on $(0, \infty)$, so the function $f(x)$ is increasing on those intervals. The first derivative is negative on $(-4/15,0)$, so the function is decreasing on that interval.
+\item Use the first derivative test to classify each critical point as a maximum or minimum.\\
+%\textbf{Solution:} From what I found above, the critical point $x = 0$ is a min, and $x = -4/15$ is neither.
+Since the function is increasing to the left of $x=-4/15$ and increasing to the right, the first derivative test says that critical point is a local maximum. Since the function is decreasing to the right of $x = 0$, and increasing to the left, that critical point is a local minimum.
+\item Find all intervals where the function is concave up and concave down.\\
+%\textbf{Solution: } I found that the second derivative is $f''(x) = 30x$. I checked the second derivative at the same test points I used above, and saw that $f''(-1)$ and $f''(-0.1)$ are both negative, but $f''(1)$ is positive. I decide that the function is concave down on $(-\infty, 0)$ and concave up on $(0, \infty)$. Oddly enough, I got this one right. I was lucky. What should I have found to tell me where to look for test points?
+Concavity can change when the second derivative is zero. We find $f''(x) = 30x+4$, so the inflection point is $x = -2/15$. Our intervals for test points at $$(-\infty, -2/15) \mbox{ and } (-2/15, \infty).$$ The second derivative is negative in the left interval and positive in the right interval. Therefore $f(x)$ is concave down on $(-\infty, -2/15)$ and concave up on $(-2/15, \infty)$.
+\item Use the second derivative test to classify each critical point as a maximum or minimum.\\
+%\textbf{Solution: } The second derivative is negative on both sides of $-4/15$, so it's not a max or a min. The second derivative is negative on the left of 0 and positive on the right, so $x= 0$ is a min.
+The second derivative test says critical points in intervals that are concave down are local maxima, and critical points in intervals that are concave up are local minima. Using the intervals from above, we see that $f(x)$ is concave down at $x = -4/15$, so that point is a local max. Similarly, the function is concave up at $x = 0$, so that point is a local min.
+\item Find the absolute max and min on the interval $[-1,3]$.
+Since $f(x)$ is a continuous function, we can use the Extreme Value Theorem. We plug the endpoints and the critical points into $f(x)$ and see $$f(-1) = -4, f(-4/15) \approx -0.95, f(0) = -1, \mbox{ and } f(3) = 152$$ Therefore the absolute min on that interval is at $x= -1$ and the absolute max is at $x = 3$.
+\item Find the value satisfying the Mean Value Theorem on $[-1,3]$.
+Since $f$ is both continuous and differentiable, MVT can be applied. We are looking for some value $c$, between $-1$ and $3$, such that $$\frac{f(3) - f(-1)}{3 - (-1)} = f'(c)$$
+We are therefore solving the equation $15x^2 + 4x = 39$. This quadratic has 2 solutions, but only $x = 1.485$ is in the interval $[-1,3]$.
+\end{itemize}
+
+\item An engineer has 100 square feet of material, to enclose a box with a square base, and no lid. What is the largest volume that can be enclosed?\\
+%\textbf{Solution:} I know I can label the sides of this box $a,b,c$, and then it's volume is $V = abc$.  I can set 100 = $abc$, but I don't know how to differentiate that. Some of the variables need to be removed, so I'm missing what I need for the constraint. Help!                         
+Since the base is square, I'll label it's 2 sides each $x$, and label the height of the box $y$. Then the volume is $V = x^2y$. This has two many variables to find a local max, so I'll use the surface area as a constraint. That gives me $100 = x^2 + 4xy$. The $x^2$ is for the bottom, the $4xy$ is for the 4 sides, and there is no top. I solve this for $y$ to get $y = \frac{100-x^2}{4x}$. My volume formula is then reduced to a single variable $$V = x^2\frac{100-x^2}{4x} = 25x - 4x^3.$$
+
+We want to use either the first or second derivative test to find the local max, so I'll get some critical points $V' = 25 - 12x^2$, and $x$ is the length of the side of a box (it has to be positive), so I get $x = \sqrt{25/12}$ for my critical point. A quick check verifies that this is a local max, so I can go back and find that the maximum volume is $V \approx 35.33 $
+
+\item Approximate the area under the curve $f(x) = \cos(x^2)$, over the interval $[-2,5]$ with 6 subdivisions.\\
+%\textbf{Solution: } I find the width of the rectangles with $\frac{5-(-2)}{6} = \frac{7}{6}.$ My test points are then $0, \frac{7}{6}, \frac{14}{6}, \frac{21}{6}, \frac{28}{6}$, and $\frac{35}{6}$. I plug all of these into $f(x)$, multiply all of them by $\frac{7}{6}$, and then I'm done.
+
+The width of each rectangle is $\frac{5-(-2)}{6} = \frac{7}{6}.$ I'll use left endpoints, so I get $-2, -5/6, 2/6, 9/6, 16/6 \mbox{ and } 23/6$. Plugging those in, I get
+
+$$\frac{7}{6}\left(\cos((-2)^2) + \cos((-5/6)^2)+ \cos((2/6)^2)+ \cos((9/6)^2)+ \cos((16/6)^2)+ \cos((23/6)^2)\right)$$
+
+\item Write the formula for a Riemann sum to find the area under the curve $f(x) = \cos(x^2)$, over the interval $[-2,5]$, with $n$ subdivisions. You do not need to evaluate the limit.\\
+%\textbf{Solution:} I can find $\Delta x = \frac{7}{n}$ and $x_i = -2 + i\frac{7}{n}$. So my Riemann Sum is $$\lim_{n \rightarrow \infty} \sum_{i = 1}^n \left(-2 + i \frac{7}{n}\right)\frac{7}{n}$$
+I find $\Delta x = \frac{7}{n}$, and so $x_i = -2 + i\frac{7}{n}$. Then my sum is $$\lim_{n \rightarrow \infty} \sum_{i = 1}^n cos\left(-2 + i \frac{7}{n}\right)^2\frac{7}{n}$$
+
+
+\item Evaluate the following definite integral.
+$$\int_{-3}^3 \sin(x) - x^3 + x^5 dx$$
+%\textbf{Solution:} $$\left(\cos(3) - 3(3)^2 + 5(3)^4\right) -\left(\cos(-3) - 3(-3)^2 + 5(-3)^4\right)$$
+The Fundamental Theorem of Calculus lets me evaluate this by antidifferentiation. My integral is then
+$$\left (-\cos(3) - \frac{3^4}{4} + \frac{3^6}6\right) - \left (-\cos(-3) - \frac{(-3)^4}{4} + \frac{(-3)^6}6\right)$$
+\item Use substitution to evaluate the following indefinite integral.
+$$\int \cos(\tan(x))\sec^2(x) dx$$
+%\textbf{Solution:} If $u = \tan$ and $du = \sec^2$, then my integral is $$\int \cos(ux)(duxdx) + C$$.
+I look for a function in the integrand, whose derivative is also in the integrand. I choose $u = \tan(x)$. Then $du = \sec^2(x)dx$. After substitution, my integral is $$\int \cos(u) du = \sin(u) + C.$$ Substitution back and I find the answer to my original integral is $\sin(\tan(x)) + C$
+\item Find the derivative with respect to $x$ of the function $y =[\sin(x)]^{\cos(x)}$.\\
+%\textbf{Solution:} $y = \ln(\cos(x))\sin(x)$, so $$\frac{dy}{dx} = \frac{1}{\cos(x)}\sin(x) + \ln(\cos(x))\cos(x)$$
+Since there is a variable in the base and a variable in the exponent, logarithmic differentiation is my only hope. Therefore I end up with the following steps.
+\begin{align*}
+    y &= [\sin(x)]^{\cos(x)}\\
+    \ln(y) &= \ln [\sin(x)]^{\cos(x)}\\
+    \ln(y) &= \cos(x) \ln(\sin(x))\\
+    \frac{1}{y} \frac{dy}{dx} &= \sin(x) \ln(\sin(x)) + \cos(x) \frac{1}{\sin(x)} \cos(x)\\
+    \frac{dy}{dx} &= y\left(\sin(x) \ln(\sin(x)) + \cos(x) \frac{1}{\sin(x)} \cos(x)\right)\\
+    \frac{dy}{dx} &= [\sin(x)]^{\cos(x)}\left(\sin(x) \ln(\sin(x)) + \cos(x) \frac{1}{\sin(x)} \cos(x)\right)\\
+\end{align*}
+\item Evaluate the limit $\lim_{x\rightarrow 3} \frac{2x-6}{9 - x^2}$.\\
+%\textbf{Solution:} I didn't check that it's indeterminate, but that's fine. So it's $\lim_{x \rightarrow 3} \frac{2}{-2x}$.
+I note that it's an indeterminate form, of type $\frac{0}{0}$, so L'Hopital's rule can apply. Therefore 
+$$\lim_{x\rightarrow 3} \frac{2x-6}{9 - x^2} = \lim_{x \rightarrow 3} \frac{2}{-2x} = -\frac{1}{3}.$$
+\end{enumerate}
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage,stackrel}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Integrating with Substitution}
+
+\begin{document}
+For each of these definite integrals, evaluate by returning to the original variable after the substitution.
+\begin{enumerate}
+    \item $\int_{-2}^0 2x^2\sqrt{1 - 4x^3} dx$
+    \item $\int_{-1}^5 (1+w)(2w + w^2)^5 dw$
+    \item $\int_{\pi/3}^0 3\sin(x/2)dx$
+    \item $\int_{-\pi}^{\pi/2} \cos(t)\cos(\sin(t))dt$
+\end{enumerate}
+For each definite integral above, when you make the substitution, use your function for $u$ to change the bounds of integration. Then evaluate the integral before you return to the original variable. Your results should match what you found above.
+
+\begin{enumerate}
+    \setcounter{enumi}{4}
+    \item Find the area between the curves $y = 2x^2 + 10$ and $y = 4x + 16$ over the interval [-2,5].
+    \item Find the area bounded by the curves $y = x^2$ and $y = \sqrt{x}$.
+    \item A spring has a natural length of 20 $cm$. A 40 $N$ force is required to stretch (and hold the spring) to a length of 30 $cm$. How much work is done in stretching the spring from $35$ $cm$ to 38 $cm$?
+    \begin{itemize}
+        \item The law we need here is Hooke's Law, $F(x) = kx$. This is the force required to stretch a spring $x$ meters from it's natural length.
+        \item You have the force needed to stretch the spring 10 $cm$, or $0.1m$ from the problem. Use this to find $k$.
+        \item If the natural length is 20 $cm$, we can treat that like 0 when determining the bounds of an integral. So a spring stretched to 35 $cm$ is really stretched $0.15m$ away from 0. What value should you use for 38 $cm$?
+        \item Integrate $F(x)$, using the value of $k$ you found above, over the inteval in meters, from 35 $cm$ to 38 $cm$. The value you find is the amount of work, in Joules, needed to stretch the spring.
+    \end{itemize}
+\end{enumerate}
+\end{document}

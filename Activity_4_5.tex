@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{graphicx}
+\usepackage[inline]{enumitem}
+\usepackage{enumitem}
+\pagestyle{fancy}
+\chead{Math 121 - Productive Failures}
+
+\begin{document}
+Find and correct all errors below.
+\begin{enumerate}
+\item Start with the function $f(x) = x^2 + 2x + 1$, which has a critical point when $x = -1$. $f(0) = 1$ and $f(-2) = 1$, so the first derivative test says this isn't a max or a min.
+\\ \textbf{Correction:} The first derivative test requires that we evaluate the first derivative on either side of the critical point. The critical point is right, but we need that $f'(0) = 2$ and $f'(-2) = -2$ to see that this is a local min.
+\item Start with the function $f$, where $f'(x) = \frac{x^2}{\sin(x)}$. Then there is a critical point when $x=0$. Since $f'(-4)<0$ and $f'(4) > 0$, the first derivative test says there is a local minimum at $x=0$.
+\\ \textbf{Correction:} The first derivative test needs a continuous function. Even though these points seem to work, since we don't know the original function, we should be cautious. Additionally, the test points are too far away, since both $\pi$ and $-\pi$ are also critical points. Pick points closer to zero.
+\item Suppose that $f$ has a critical point at $x = 5$ and $f''(5) = 2$. Then the second derivative test says $f$ has a local maximum at $x=5$.
+\\ \textbf{Correction:} If the second derivative is positive, the graph is concave up, which means the point is a local minimum.
+\item Suppose that $f(x) = x^2 + 2x -7$. $f$ has a critical point when $x = -1$, but $f$ doesn't have any inflection points. I don't think the second derivative test can be used. Why am I wrong?
+\\ \textbf{Correction:} The second derivative test doesn't need inflection points. Find the second derivative, and evaluate $f''(-1)$. You'll see that this is a local minimum.
+\item The function $f(x) = 2x^3 + 15x^2 + 36x$ has an absolute max at $x=-3$ and an absolute min at $x = -2$ on the interval $[-4,4]$
+\\ \textbf{Correction:} The critical points of this function are $-2,-3$, but since it's a closed interval, we also have to check the endpoints. That requires the Extreme Value Theorem, so we state that the function is continuous. Then $f(-4) = -32$, $f(-3) = -27$, $f(-2) = -28$, and $f(4) = 512$, so the absolute min is at -4 and the absolute max is at 4.
+\item The function $g(x) = \sqrt[3]{x^2}(2x+1)$ has only one critical point, when $x=\frac{1}{5}$.
+\\ \textbf{Correction:} Do not forget to check for points where the derivative doesn't exist. There is also a critical value at $x=0$
+\item Given the function $f(x) = x^3 + 2x^2 + x$ on the interval [-1,2], the point that satisfies the Mean Value Theorem is when $f(x) = 4$, so when $x=1$.
+\\ \textbf{Correction:} First, state that the function is continuous and differentiable, since it's a polynomial. Then 
+$$\frac{f(2) - f(-1)}{2 - (-1)} = \frac{18-0}{3} = 6$$ So the first mistake was the calculuation. Second, MVT says there is a point where $f'(x) = 6$. Solve the equation $3x^2 + 4x + 1 = 6$, or more simply, $3x^2 + 4x - 5 = 0$, and you find $x = \frac{-4 \pm \sqrt{76}}{6}$. These are approximately $.7$ and $-2.1$, but only the first is in the interval [-1,2].
+\item Find the maximum area of a rectangle with perimeter 100.
+$$100 = xy$$
+$$P = 2x + 2y$$
+$$P = 2x + 2\frac{100}{x}$$
+$$P' = 2 - 2\frac{100}{x^2}$$
+$$P' = 0?$$
+\\ \textbf{Correction:} I mixed up the function to be optimized with the constraint. I also didn't draw a picture, so the grader doesn't know what $x$ and $y$ mean. Let's assume $x$ and $y$ are the sides of this rectangle, $A$ is the area, and $P$ is the perimeter. Then my equation to optimize is $A = xy$, and my constraint is $100 = 2x + 2y$. Solving for $x$, I get $x = 50-y$, and my area equation becomes $A = (50-y)y$. Then $\frac{dA}{dy} = 50 - 2y$, and if $\frac{dA}{dy} = 0$, then $y = 25$. Using the test points $y = 20$ and $y = 30$ in the first derivative test, I get that this is a local maximum. Therefore I solve for $x$, and see that if $y = 25$, $x = 25$, so the maximum area is $A = 625$.
+\item A cylindrical can is supposed to hold 1500 ml of fluid. What are the dimensions that will minimize the cost of the can?
+$$V = \pi r^2 h = 1500$$
+$$S = 2\pi r^2 + 2\pi rh$$
+$$S' = 4\pi r \frac{dr}{dt} + 2\pi h \frac{dr}{dt} + 2\pi r \frac{dh}{dt} = 0?$$
+\\ \textbf{Correction:} I got the constraint right and the formulas are both fine. The issue was that I tried to implicitly differentiate, as though this were a related rates problem.
+
+Instead, solve the first formula for $h$ to get $$h = \frac{1500}{\pi r^2}$$
+The formula for the surface area is then $S = 2\pi r^2 + 2\pi r \frac{1500}{\pi r^2}$. Simplify this and differentiate, and you find
+$$\frac{dS}{dr} = 4r - \frac{3000}{r^2}$$
+Set this equal to zero, and multiply both sides by $r^2$, and you'll find the critical points. Use the first or second derivative test to find which is the local min, and use that value of $r$ to find a value for $h$.
+\end{enumerate}
+\end{document}
